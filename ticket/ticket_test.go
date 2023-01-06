@@ -16,7 +16,6 @@ func TestTicketPrice(t *testing.T) {
 		{"Ticket $15 when age is 15", 15, 15.0},
 		{"Ticket $30 when age over 15", 16, 30.0},
 		{"Ticket $30 when age is 50", 50, 30.0},
-		{"Ticket $15 when age over 15", 51, 15.0},
 		{"Ticket $5 when age over 50", 51, 5.0},
 	}
 
