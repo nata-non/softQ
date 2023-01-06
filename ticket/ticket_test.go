@@ -2,12 +2,14 @@ package ticket
 
 import "testing"
 
+type ticket struct {
+	name string
+	age  int
+	want float64
+}
+
 func TestTicketPrice(t *testing.T) {
-	data := []struct {
-		name string
-		age  int
-		want float64
-	}{
+	data := []ticket{
 		{"Free Ticket when age is 0", 0, 0.0},
 		{"Free Ticket when age under 3", 3, 0.0},
 		{"Ticket $15 when age at 4 year old", 4, 15.0},
