@@ -18,6 +18,7 @@ func TestTicketPrice(t *testing.T) {
 		{"Ticket $30 when age is 50", 50, 30.0},
 		{"Ticket $5 when age over 50", 51, 5.0},
 	}
+
 	for _, ticket := range data {
 		t.Run(ticket.name, func(t *testing.T) {
 			got := price(ticket.age)
